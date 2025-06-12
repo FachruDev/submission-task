@@ -8,7 +8,6 @@ export async function POST(request) {
     const body = await request.json();
     const { query } = body;
 
-    // Validasi sederhana
     if (!query) {
       return NextResponse.json({ error: 'Query is required' }, { status: 400 });
     }
